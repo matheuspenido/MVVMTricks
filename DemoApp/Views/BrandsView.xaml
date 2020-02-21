@@ -1,0 +1,41 @@
+﻿<UserControl x:Class="DemoApp.Views.BrandsView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:tab="clr-namespace:FormattedTabControl;assembly=FormattedTabControl"
+             xmlns:vm="clr-namespace:DemoApp.ViewModels"
+             xmlns:vw="clr-namespace:DemoApp.Views">
+    <UserControl.Resources>
+        <DataTemplate DataType="{x:Type vm:ProductViewModel}">
+            <vw:ProductView />
+        </DataTemplate>
+        <DataTemplate DataType="{x:Type vm:SingleBrandViewModel}">
+            <vw:SingleBrandView />
+        </DataTemplate>
+    </UserControl.Resources>
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="15*" />
+            <ColumnDefinition Width="70*" />
+            <ColumnDefinition Width="15*" />
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="*" />
+        </Grid.RowDefinitions>
+        <TextBlock Text="Brand Name" Grid.Row="0" Grid.Column="0" Margin="5" />
+        <TextBox x:Name="txtBrandName"
+            Grid.Row="0" 
+            Grid.Column="1"
+            Margin="5" />
+        <Button Grid.Row="0" 
+                Grid.Column="2" 
+                Margin="5" 
+                Content="Add Brand"
+                Command="{Binding AddBrand}"
+                CommandParameter="{Binding ElementName=txtBrandName, Path=Text}"/>
+        <tab:FormattedTab x:Name="tab"
+                          Grid.ColumnSpan="3"
+                          Grid.Row="1"
+                          ItemSource="{Binding Brands}"/>
+    </Grid>
+</UserControl>

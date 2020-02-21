@@ -1,0 +1,16 @@
+﻿<UserControl x:Class="DemoApp.Views.ProductView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*" />
+            <ColumnDefinition Width="Auto" />
+        </Grid.ColumnDefinitions>
+        <TextBlock Grid.Column="0" Text="{Binding ProductName}" Margin="5"/>
+        <Button Grid.Column="1" Margin="5"
+                    Content="Remove"
+                    Command="{Binding RelativeSource={RelativeSource FindAncestor, AncestorType={x:Type ListBox}}, Path= DataContext.DeleteProduct}"
+                    CommandParameter="{Binding}"
+                x:Name="testee"/>
+    </Grid>
+</UserControl>

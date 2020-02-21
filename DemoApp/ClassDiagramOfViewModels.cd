@@ -1,0 +1,39 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="DemoApp.ViewModels.BaseViewModel">
+    <Position X="4.25" Y="0.5" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAIAAAAAAAAAAgAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>ViewModels\BaseViewModel.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="DemoApp.ViewModels.BrandsViewModel">
+    <Position X="1" Y="2.5" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>AAEEAAAAAAAAAAAAAAAAAAAAAAAQAAQAIAAAACABAAI=</HashCode>
+      <FileName>ViewModels\BrandsViewModel.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsCollectionAssociation>
+      <Property Name="Brands" />
+    </ShowAsCollectionAssociation>
+  </Class>
+  <Class Name="DemoApp.ViewModels.ProductViewModel">
+    <Position X="7.75" Y="2.75" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgAAAAIAAA=</HashCode>
+      <FileName>ViewModels\ProductViewModel.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DemoApp.ViewModels.SingleBrandViewModel">
+    <Position X="4.25" Y="2.5" Width="2" />
+    <TypeIdentifier>
+      <HashCode>BAAAAAQAAAAAAAAAAAABSAgAAEAAAAAAAAAAJAAAAAQ=</HashCode>
+      <FileName>ViewModels\SingleBrandViewModel.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsCollectionAssociation>
+      <Property Name="Products" />
+    </ShowAsCollectionAssociation>
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>
